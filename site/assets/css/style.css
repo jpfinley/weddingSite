@@ -13,10 +13,26 @@ ol, ul {
 
 /* Schedule ==================== */
 
-.time {
-  margin-top: 30px;
+.event {
+  margin-bottom: 4em;
 }
 
-.event {
-  margin-bottom: 2em;
+.event:nth-of-type(1) {
+  margin-top: 4em;
+}
+
+.time {
+  padding-top: 30px;
+  border-top: solid 1px #b99a54;
+  color: #b99a54;
+}
+
+.time span {
+  color: #b3b3b3;
+}
+
+.event h2 {
+  margin-top: 0;
+  padding-top: 20px;
+  border-top: solid 1px #e6e6e6;
 }
