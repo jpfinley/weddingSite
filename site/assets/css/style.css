@@ -4,3 +4,19 @@ body {
   min-height: 2000px;
   padding-top: 70px;
 }
+
+/* General ==================== */
+
+ol, ul {
+  list-style: none;
+}
+
+/* Schedule ==================== */
+
+.time {
+  margin-top: 30px;
+}
+
+.event {
+  margin-bottom: 2em;
+}
