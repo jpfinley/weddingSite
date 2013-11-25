@@ -12,10 +12,21 @@ Add subway directions to the church.
 
 ## Travel
 
+### Getting Here
+
+- Flights and Airports
+- Bus
+
+### Accomodations
+
 - Hotels we like
 - AirBnb
-- Good information to know about getting about NYC
-- Flights and Airports
+
+### Ground transportation
+
+- Public Transit
+- Taxi
+- Car Service
 
 ## Registry
 
