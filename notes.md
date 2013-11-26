@@ -6,28 +6,32 @@
 |-- Travel & Accomodations
 |-- Registry
 
-## Schedule
+# TODO
+
+- Investigate min-height on body
+
+# Schedule
 
 Add subway directions to the church.
 
-## Travel
+# Travel
 
-### Getting Here
+## Getting Here
 
 - Flights and Airports
 - Bus
 
-### Accomodations
+## Accomodations
 
 - Hotels we like
 - AirBnb
 
-### Ground transportation
+## Ground transportation
 
 - Public Transit
 - Taxi
 - Car Service
 
-## Registry
+# Registry
 
 Jamie to add.
