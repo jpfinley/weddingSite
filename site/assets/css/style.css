@@ -1,7 +1,6 @@
 /* Mecahnics ==================== */
 
 body {
-  min-height: 2000px;
   padding-top: 70px;
 }
 
@@ -49,6 +48,18 @@ header {
 
 header span {
   color: #b3b3b3;
+}
+
+/* Guide ==================== */
+
+.location {
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.location.active {
+  background:#222;
+  color:#eee;
 }
 
 /* Travel ==================== */
