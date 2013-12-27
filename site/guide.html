@@ -12,21 +12,21 @@ title: The Wedding of John and Jamie
 <div id='pane'><div id='map'></div></div>
 
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-6" id="locations">
     <div class="row section section-location">
-      <div class="col-md-6 location" id='cover' class='cover active' onclick='setActive(0, true)'>
+      <div class="col-md-12 location" id='cover' class='cover active' onclick='setActive(0, true)'>
         <h1>Welcome to New York</h1>
         <p>Let's make one thing clear right from the start: THANK YOU. Making the trip to New York City isn't going to be easy for everyone, and you have a special place in our hearts for making this journey.</p>
       	<p>If you're in for the weekend, you might have some time to take in the best of what New York has to offer. These are our picks.</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-12">
         <header>Restaurants</header>
       </div>
     </div>
     <div class="row section section-location">
-      <div class="col-md-6 location" id='char' onclick='setActive(1, true)'>
+      <div class="col-md-12 location" id='char' onclick='setActive(1, true)'>
         <h3>Char No. 4</h3>
         <p>Lots of great whiskey.</p>
         <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
@@ -35,7 +35,7 @@ title: The Wedding of John and Jamie
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 location" id='chuko' onclick='setActive(2, true)'>
+      <div class="col-md-12 location" id='chuko' onclick='setActive(2, true)'>
         <h3>Chuko</h3>
         <p>This is a ramen restaurant near our house.</p>
         <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
@@ -44,7 +44,7 @@ title: The Wedding of John and Jamie
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 location" id='shack' onclick='setActive(3, true)'>
+      <div class="col-md-12 location" id='shack' onclick='setActive(3, true)'>
         <h3>Shake Shack</h3>
         <p>Get the double stack!</p>
         <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
@@ -53,7 +53,7 @@ title: The Wedding of John and Jamie
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 location" id='prospect' onclick='setActive(4, true)'>
+      <div class="col-md-12 location" id='prospect' onclick='setActive(4, true)'>
         <h3>Prospect Park</h3>
         <p>Enjoy a nice stroll around the park.</p>
         <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
@@ -62,12 +62,12 @@ title: The Wedding of John and Jamie
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-12">
         <header>Bars</header>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 location" id='amsterdam' onclick='setActive(5, true)'>
+      <div class="col-md-12 location" id='amsterdam' onclick='setActive(5, true)'>
         <h3>Amsterdam 106</h3>
         <p>We had our first date here.</p>
         <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
@@ -135,8 +135,7 @@ var setActive = function(index, ease) {
   // Ease map to active marker.
   if (!ease) {
     map.centerzoom(markers[index].location, markers[index].data.properties.zoom||14);
-  } else {
-    map.ease.location(markers[index].location).zoom(markers[index].data.properties.zoom||14).optimal(0.5, 1.00);
+  } else { map.ease.location(markers[index].location).zoom(markers[index].data.properties.zoom||14).optimal(0.5, 1.00);
   }
 
   return true;
