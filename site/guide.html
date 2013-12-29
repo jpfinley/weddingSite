@@ -12,8 +12,8 @@ title: The Wedding of John and Jamie
 
 <div class="row">
   <div class="col-md-6" id="locations">
-    <div class="row section section-location">
-      <div class="col-md-12 location" id='cover' class='cover active' onclick='setActive(0, true)'>
+    <div class="row">
+      <div class="col-md-12 section-location">
         <h1>Welcome to New York</h1>
         <p>Let's make one thing clear right from the start: THANK YOU. Making the trip to New York City isn't going to be easy for everyone, and you have a special place in our hearts for making this journey.</p>
       	<p>If you're in for the weekend, you might have some time to take in the best of what New York has to offer. These are our picks.</p>
@@ -24,8 +24,8 @@ title: The Wedding of John and Jamie
         <header>Restaurants</header>
       </div>
     </div>
-    <div class="row section section-location">
-      <div class="col-md-12 location" id='char' onclick='setActive(1)'>
+    <div class="row">
+      <div class="col-md-12 location" id='char' onclick='setActive(0)'>
         <h3>Char No. 4</h3>
         <p>Lots of great whiskey.</p>
         <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
@@ -34,7 +34,7 @@ title: The Wedding of John and Jamie
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12 location" id='chuko' onclick='setActive(2)'>
+      <div class="col-md-12 location" id='chuko' onclick='setActive(1)'>
         <h3>Chuko</h3>
         <p>This is a ramen restaurant near our house.</p>
         <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
@@ -43,7 +43,7 @@ title: The Wedding of John and Jamie
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12 location" id='shack' onclick='setActive(3)'>
+      <div class="col-md-12 location" id='shack' onclick='setActive(2)'>
         <h3>Shake Shack</h3>
         <p>Get the double stack!</p>
         <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
@@ -52,7 +52,7 @@ title: The Wedding of John and Jamie
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12 location" id='prospect' onclick='setActive(4)'>
+      <div class="col-md-12 location" id='prospect' onclick='setActive(3)'>
         <h3>Prospect Park</h3>
         <p>Enjoy a nice stroll around the park.</p>
         <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
@@ -66,7 +66,7 @@ title: The Wedding of John and Jamie
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12 location" id='amsterdam' onclick='setActive(5)'>
+      <div class="col-md-12 location" id='amsterdam' onclick='setActive(4)'>
         <h3>Amsterdam 106</h3>
         <p>We had our first date here.</p>
         <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
@@ -89,16 +89,6 @@ title: The Wedding of John and Jamie
   var geoJson = {
       type: 'FeatureCollection',
       features: [
-      {
-          type: 'Feature',
-          properties: {
-              id: '0',
-          },
-          geometry: {
-              type: 'Point',
-              coordinates: [-73.9637, 40.6937]
-          }
-      },
       {
           type: 'Feature',
           properties: {
@@ -185,7 +175,7 @@ title: The Wedding of John and Jamie
 
   // Move the map and open a popup when you click on a marker
   map.markerLayer.on('click', function(e) {
-    setActive(e.layer.feature.properties.id);
+    setActive(e.layer.feature.properties.id - 1);
   });
 
   // Bind to scroll events to find the active section.
