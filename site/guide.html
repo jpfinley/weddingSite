@@ -91,7 +91,6 @@ title: The Wedding of John and Jamie
           type: 'Feature',
           properties: {
               id: '0',
-              zoom: 13,
           },
           geometry: {
               type: 'Point',
@@ -103,6 +102,9 @@ title: The Wedding of John and Jamie
           properties: {
               title: 'Char',
               id: '1',
+              "marker-color": "#fc4353",
+              "marker-size": "large",
+              "marker-symbol": "restaurant"
           },
           geometry: {
               type: 'Point',
@@ -114,6 +116,9 @@ title: The Wedding of John and Jamie
           properties: {
               title: 'Chuko',
               id: '2',
+              "marker-color": "#fc4353",
+              "marker-size": "large",
+              "marker-symbol": "restaurant"
           },
           geometry: {
               type: 'Point',
@@ -127,7 +132,7 @@ title: The Wedding of John and Jamie
               id: '3',
               "marker-color": "#fc4353",
               "marker-size": "large",
-              "marker-symbol": "harbor"
+              "marker-symbol": "fast-food"
           },
           geometry: {
               type: 'Point',
@@ -139,6 +144,9 @@ title: The Wedding of John and Jamie
           properties: {
               title: 'Prospect Park',
               id: '4',
+              "marker-color": "#fc4353",
+              "marker-size": "large",
+              "marker-symbol": "park2"
           },
           geometry: {
               type: 'Point',
@@ -165,7 +173,7 @@ title: The Wedding of John and Jamie
     // Move to marker and open
     // TODO: bring back easing
     map.panTo(markers[index].getLatLng());
-    map.setZoom(15);
+    map.setZoom(14);
     markers[index].openPopup();
 
     // Set a body class for the active location.
