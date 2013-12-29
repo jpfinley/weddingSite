@@ -6,6 +6,7 @@ title: The Wedding of John and Jamie
 <script src='assets/javascripts/underscore-min.js'></script>
 <script src='https://api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.css' rel='stylesheet' />
+<!-- TODO: remove this stylesheet -->
 <link href='assets/css/map.css' rel='stylesheet' />
 
 <div id='pane'><div id='map'></div></div>
@@ -93,7 +94,8 @@ title: The Wedding of John and Jamie
           type: 'Feature',
           properties: {
               title: 'Char',
-              id: '1',
+              id: 'char',
+              rank: '1',
               "marker-color": "#fc4353",
               "marker-size": "large",
               "marker-symbol": "restaurant"
@@ -107,7 +109,8 @@ title: The Wedding of John and Jamie
           type: 'Feature',
           properties: {
               title: 'Chuko',
-              id: '2',
+              id: 'chuko',
+              rank: '2',
               "marker-color": "#fc4353",
               "marker-size": "large",
               "marker-symbol": "restaurant"
@@ -121,7 +124,8 @@ title: The Wedding of John and Jamie
           type: 'Feature',
           properties: {
               title: 'Shake Shack',
-              id: '3',
+              id: 'shack',
+              rank: '3',
               "marker-color": "#fc4353",
               "marker-size": "large",
               "marker-symbol": "fast-food"
@@ -135,7 +139,8 @@ title: The Wedding of John and Jamie
           type: 'Feature',
           properties: {
               title: 'Prospect Park',
-              id: '4',
+              id: 'prospect',
+              rank: '4',
               "marker-color": "#fc4353",
               "marker-size": "large",
               "marker-symbol": "park2"
@@ -173,39 +178,16 @@ title: The Wedding of John and Jamie
     return true;
   };
 
+  // Scroll the page to the clicked marker's section
+  function scrollIntoView(element){
+    $("html,body").animate({ scrollTop: $(element).offset().top - 110 }, 0);
+  }
+  
   // Move the map and open a popup when you click on a marker
   map.markerLayer.on('click', function(e) {
-    setActive(e.layer.feature.properties.id - 1);
+    setActive(e.layer.feature.properties.rank - 1);
+    scrollIntoView(document.getElementById(e.layer.feature.properties.id));
   });
-
-  // Bind to scroll events to find the active section.
-  // window.onscroll = _(function() {
-  //   // IE 8
-  //   if (window.pageYOffset === undefined) {
-  //     var y = document.documentElement.scrollTop;
-  //     var h = document.documentElement.clientHeight;
-  //   } else {
-  //     var y = window.pageYOffset;
-  //     var h = window.innerHeight;
-  //   }
-  //
-  //   // If scrolled to the very top of the page set the first section active.
-  //   if (y === 0) return setActive(0, true);
-  //
-  //   // Otherwise, conditionally determine the extent to which page must be
-  //   // scrolled for each section. The first section that matches the current
-  //   // scroll position wins and exits the loop early.
-  //   var memo = 0;
-  //   var buffer = (h * 0.3333);
-  //   var active = _(locations).any(function(el, index) {
-  //     memo += el.offsetHeight;
-  //     return y less than (memo-buffer) ? setActive(index, true) : false;
-  //   });
-  //
-  //   // If no section was set active the user has scrolled past the last section.
-  //   // Set the last section active.
-  //   if (!active) setActive(locations.length - 1, true);
-  // }).debounce(10);
 
   // Set map to fit marker boundary.
   map.fitBounds(map.markerLayer.getBounds());

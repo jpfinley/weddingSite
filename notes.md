@@ -8,7 +8,7 @@
 
 # TODO
 
-- Scroll the page to the clicked marker's section
+- Remove map.css
 - Bring back easing
 
 # Schedule
