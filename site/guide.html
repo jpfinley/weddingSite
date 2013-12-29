@@ -78,148 +78,141 @@ title: The Wedding of John and Jamie
 </div>
 
 <script>
-// Make this map happen
-var map = L.mapbox.map('map', 'jpinley.gk82f9l5', {
-  scrollWheelZoom: false,
-  // TODO: decide if this is a good idea. It probably
-  // makes sense to keep it if I can reset the zoom
-  // during setActive()
-  // doubleClickZoom: false,
-  zoomControl: false
-})
-  .setView([40.6853, -73.9755], 14);
+  // Make this map happen
+  var map = L.mapbox.map('map', 'jpinley.gk82f9l5', {
+    scrollWheelZoom: false,
+    // TODO: decide if this is a good idea. It probably
+    // makes sense to keep it if I can reset the zoom
+    // during setActive()
+    // doubleClickZoom: false,
+    zoomControl: false
+  })
+    .setView([40.6853, -73.9755], 14);
 
-var geoJson = {
-    type: 'FeatureCollection',
-    features: [
-    {
-        type: 'Feature',
-        properties: {
-            id: '0',
-            zoom: 13,
-        },
-        geometry: {
-            type: 'Point',
-            coordinates: [-73.9637, 40.6937]
-        }
-    },
-    {
-        type: 'Feature',
-        properties: {
-            title: 'Char',
-            id: '1',
-        },
-        geometry: {
-            type: 'Point',
-            coordinates: [-73.9915, 40.6848]
-        }
-    },
-    {
-        type: 'Feature',
-        properties: {
-            title: 'Chuko',
-            id: '2',
-        },
-        geometry: {
-            type: 'Point',
-            coordinates: [-73.9680, 40.6802]
-        }
-    },
-    {
-        type: 'Feature',
-        properties: {
-            title: 'Shake Shack',
-            id: '3',
-            // "description": "155 9th St, San Francisco",
-            "marker-color": "#fc4353",
-            "marker-size": "large",
-            "marker-symbol": "harbor"
-        },
-        geometry: {
-            type: 'Point',
-            coordinates: [-73.9889, 40.6917]
-        }
-    },
-    {
-        type: 'Feature',
-        properties: {
-            title: 'Prospect Park',
-            id: '4',
-        },
-        geometry: {
-            type: 'Point',
-            coordinates: [-73.9704, 40.6653]
-        }
-    }]
-};
+  var geoJson = {
+      type: 'FeatureCollection',
+      features: [
+      {
+          type: 'Feature',
+          properties: {
+              id: '0',
+              zoom: 13,
+          },
+          geometry: {
+              type: 'Point',
+              coordinates: [-73.9637, 40.6937]
+          }
+      },
+      {
+          type: 'Feature',
+          properties: {
+              title: 'Char',
+              id: '1',
+          },
+          geometry: {
+              type: 'Point',
+              coordinates: [-73.9915, 40.6848]
+          }
+      },
+      {
+          type: 'Feature',
+          properties: {
+              title: 'Chuko',
+              id: '2',
+          },
+          geometry: {
+              type: 'Point',
+              coordinates: [-73.9680, 40.6802]
+          }
+      },
+      {
+          type: 'Feature',
+          properties: {
+              title: 'Shake Shack',
+              id: '3',
+              "marker-color": "#fc4353",
+              "marker-size": "large",
+              "marker-symbol": "harbor"
+          },
+          geometry: {
+              type: 'Point',
+              coordinates: [-73.9889, 40.6917]
+          }
+      },
+      {
+          type: 'Feature',
+          properties: {
+              title: 'Prospect Park',
+              id: '4',
+          },
+          geometry: {
+              type: 'Point',
+              coordinates: [-73.9704, 40.6653]
+          }
+      }]
+  };
 
-// Add markers to the map
-map.markerLayer.setGeoJSON(geoJson);
+  // Add markers to the map
+  map.markerLayer.setGeoJSON(geoJson);
 
-// Array of all markers
-var markers = [];
-map.markerLayer.eachLayer(function(marker) { markers.push(marker); });
+  // Array of all markers
+  var markers = [];
+  map.markerLayer.eachLayer(function(marker) { markers.push(marker); });
 
-// Array of location elements.
-var locations = document.getElementsByClassName('location');
+  // Array of location elements.
+  var locations = document.getElementsByClassName('location');
 
-// Helper to set the active location.
-var setActive = function(index) {
-  // Set active class on locations.
-  _(locations).each(function(s) { s.className = s.className.replace(' active', '') });
-  locations[index].className += ' active';
-  // Move to marker and open
-  map.panTo(markers[index].getLatLng());
-  markers[index].openPopup();
+  // Helper to set the active location.
+  var setActive = function(index) {
+    // Set active class on locations.
+    _(locations).each(function(s) { s.className = s.className.replace(' active', '') });
+    locations[index].className += ' active';
+    // Move to marker and open
+    // TODO: bring back easing
+    map.panTo(markers[index].getLatLng());
+    markers[index].openPopup();
 
-  // Set a body class for the active location.
-  document.body.className = 'location-' + index;
+    // Set a body class for the active location.
+    document.body.className = 'location-' + index;
 
-  // TODO: bring back easing
-  // // Ease map to active marker.
-  // if (!ease) {
-  //   map.centerzoom(markers[index].location, markers[index].data.properties.zoom||14);
-  // } else {
-  //   map.ease.location(markers[index].location).zoom(markers[index].data.properties.zoom||14).optimal(0.5, 1.00);
-  // }
-  return true;
-};
+    return true;
+  };
 
-// Move the map and open a popup when you click on a marker
-map.markerLayer.on('click', function(e) {
-  setActive(e.layer.feature.properties.id);
-});
+  // Move the map and open a popup when you click on a marker
+  map.markerLayer.on('click', function(e) {
+    setActive(e.layer.feature.properties.id);
+  });
 
-// Bind to scroll events to find the active section.
-// window.onscroll = _(function() {
-//   // IE 8
-//   if (window.pageYOffset === undefined) {
-//     var y = document.documentElement.scrollTop;
-//     var h = document.documentElement.clientHeight;
-//   } else {
-//     var y = window.pageYOffset;
-//     var h = window.innerHeight;
-//   }
-//
-//   // If scrolled to the very top of the page set the first section active.
-//   if (y === 0) return setActive(0, true);
-//
-//   // Otherwise, conditionally determine the extent to which page must be
-//   // scrolled for each section. The first section that matches the current
-//   // scroll position wins and exits the loop early.
-//   var memo = 0;
-//   var buffer = (h * 0.3333);
-//   var active = _(locations).any(function(el, index) {
-//     memo += el.offsetHeight;
-//     return y < (memo-buffer) ? setActive(index, true) : false;
-//   });
-//
-//   // If no section was set active the user has scrolled past the last section.
-//   // Set the last section active.
-//   if (!active) setActive(locations.length - 1, true);
-// }).debounce(10);
+  // Bind to scroll events to find the active section.
+  // window.onscroll = _(function() {
+  //   // IE 8
+  //   if (window.pageYOffset === undefined) {
+  //     var y = document.documentElement.scrollTop;
+  //     var h = document.documentElement.clientHeight;
+  //   } else {
+  //     var y = window.pageYOffset;
+  //     var h = window.innerHeight;
+  //   }
+  //
+  //   // If scrolled to the very top of the page set the first section active.
+  //   if (y === 0) return setActive(0, true);
+  //
+  //   // Otherwise, conditionally determine the extent to which page must be
+  //   // scrolled for each section. The first section that matches the current
+  //   // scroll position wins and exits the loop early.
+  //   var memo = 0;
+  //   var buffer = (h * 0.3333);
+  //   var active = _(locations).any(function(el, index) {
+  //     memo += el.offsetHeight;
+  //     return y less than (memo-buffer) ? setActive(index, true) : false;
+  //   });
+  //
+  //   // If no section was set active the user has scrolled past the last section.
+  //   // Set the last section active.
+  //   if (!active) setActive(locations.length - 1, true);
+  // }).debounce(10);
 
-// Set map to fit marker boundary.
-map.fitBounds(map.markerLayer.getBounds());
+  // Set map to fit marker boundary.
+  map.fitBounds(map.markerLayer.getBounds());
 
 </script>
