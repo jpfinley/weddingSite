@@ -8,7 +8,8 @@
 
 # TODO
 
-- Investigate min-height on body
+- Scroll the page to the clicked marker's section
+- Bring back easing
 
 # Schedule
 
