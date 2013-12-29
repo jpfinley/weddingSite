@@ -80,11 +80,6 @@ title: The Wedding of John and Jamie
 <script>
   // Make this map happen
   var map = L.mapbox.map('map', 'jpinley.gk82f9l5', {
-    scrollWheelZoom: false,
-    // TODO: decide if this is a good idea. It probably
-    // makes sense to keep it if I can reset the zoom
-    // during setActive()
-    // doubleClickZoom: false,
     zoomControl: false
   })
     .setView([40.6853, -73.9755], 14);
@@ -170,6 +165,7 @@ title: The Wedding of John and Jamie
     // Move to marker and open
     // TODO: bring back easing
     map.panTo(markers[index].getLatLng());
+    map.setZoom(15);
     markers[index].openPopup();
 
     // Set a body class for the active location.
