@@ -187,9 +187,7 @@ var setActive = function(index) {
 
 // Move the map and open a popup when you click on a marker
 map.markerLayer.on('click', function(e) {
-  // map.panTo(e.layer.getLatLng());
-  // e.openPopup();
-  setActive(e.feature.properties.id);
+  setActive(e.layer.feature.properties.id);
 });
 
 // Bind to scroll events to find the active section.
@@ -221,6 +219,7 @@ map.markerLayer.on('click', function(e) {
 //   if (!active) setActive(locations.length - 1, true);
 // }).debounce(10);
 
-// Set map to first section.
-setActive(0);
+// Set map to fit marker boundary.
+map.fitBounds(map.markerLayer.getBounds());
+
 </script>
