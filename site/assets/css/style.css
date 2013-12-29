@@ -58,6 +58,10 @@ header span {
 
 /* Guide ==================== */
 
+.section-location {
+    margin-bottom: 4em;
+}
+
 .location {
   background-color: white;
   padding: 20px;
@@ -71,6 +75,25 @@ header span {
 
 #locations {
   background-color: white;
+}
+
+#pane {
+  position:fixed;
+  top:0px;
+  bottom:0px;
+  right:0px;
+  width:66.6666%;
+}
+
+#map  {
+  position:absolute;
+  top:0px;
+  bottom:0px;
+  width:230%;
+  left:-50%;
+  transition:opacity 250ms;
+  -moz-transition:opacity 250ms;
+  -webkit-transition:opacity 250ms;
 }
 
 /* Travel ==================== */
