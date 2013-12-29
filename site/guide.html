@@ -4,9 +4,8 @@ title: The Wedding of John and Jamie
 ---
 
 <script src='assets/javascripts/underscore-min.js'></script>
-
-<script src='https://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css' rel='stylesheet' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.css' rel='stylesheet' />
 <link href='assets/css/map.css' rel='stylesheet' />
 
 <div id='pane'><div id='map'></div></div>
@@ -26,7 +25,7 @@ title: The Wedding of John and Jamie
       </div>
     </div>
     <div class="row section section-location">
-      <div class="col-md-12 location" id='char' onclick='setActive(1, true)'>
+      <div class="col-md-12 location" id='char' onclick='setActive(1)'>
         <h3>Char No. 4</h3>
         <p>Lots of great whiskey.</p>
         <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
@@ -35,7 +34,7 @@ title: The Wedding of John and Jamie
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12 location" id='chuko' onclick='setActive(2, true)'>
+      <div class="col-md-12 location" id='chuko' onclick='setActive(2)'>
         <h3>Chuko</h3>
         <p>This is a ramen restaurant near our house.</p>
         <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
@@ -44,7 +43,7 @@ title: The Wedding of John and Jamie
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12 location" id='shack' onclick='setActive(3, true)'>
+      <div class="col-md-12 location" id='shack' onclick='setActive(3)'>
         <h3>Shake Shack</h3>
         <p>Get the double stack!</p>
         <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
@@ -53,7 +52,7 @@ title: The Wedding of John and Jamie
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12 location" id='prospect' onclick='setActive(4, true)'>
+      <div class="col-md-12 location" id='prospect' onclick='setActive(4)'>
         <h3>Prospect Park</h3>
         <p>Enjoy a nice stroll around the park.</p>
         <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
@@ -67,7 +66,7 @@ title: The Wedding of John and Jamie
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12 location" id='amsterdam' onclick='setActive(5, true)'>
+      <div class="col-md-12 location" id='amsterdam' onclick='setActive(5)'>
         <h3>Amsterdam 106</h3>
         <p>We had our first date here.</p>
         <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
@@ -79,67 +78,119 @@ title: The Wedding of John and Jamie
 </div>
 
 <script>
-var geojson = [
-  { "geometry": { "type": "Point", "coordinates": [-73.9637, 40.6937] },
-    "properties": { "id": "cover", "zoom": 13 } },
-  { "geometry": { "type": "Point", "coordinates": [-73.9915, 40.6848] },
-    "properties": { "id": "char" } },
-  { "geometry": { "type": "Point", "coordinates": [-73.9680, 40.6802] },
-    "properties": { "id": "chuko" } },
-  { "geometry": { "type": "Point", "coordinates": [-73.9889, 40.6917] },
-    "properties": { "id": "shack" } },
-  { "geometry": { "type": "Point", "coordinates": [-73.9704, 40.6653] },
-    "properties": { "id": "prospect" } },
-  { "geometry": { "type": "Point", "coordinates": [-73.9656, 40.8004] },
-    "properties": { "id": "amsterdam" } }
-];
-var tiles = mapbox.layer().tilejson({
-  tiles: [ "https://a.tiles.mapbox.com/v3/examples.map-liczq28b/{z}/{x}/{y}.png" ]
-});
+// Make this map happen
+var map = L.mapbox.map('map', 'jpinley.gk82f9l5', {
+  scrollWheelZoom: false,
+  // TODO: decide if this is a good idea. It probably
+  // makes sense to keep it if I can reset the zoom
+  // during setActive()
+  // doubleClickZoom: false,
+  zoomControl: false
+})
+  .setView([40.6853, -73.9755], 14);
 
-// Use https for markers
-mapbox.markers.marker_baseurl = 'https://a.tiles.mapbox.com/v3/marker/';
+var geoJson = {
+    type: 'FeatureCollection',
+    features: [
+    {
+        type: 'Feature',
+        properties: {
+            id: '0',
+            zoom: 13,
+        },
+        geometry: {
+            type: 'Point',
+            coordinates: [-73.9637, 40.6937]
+        }
+    },
+    {
+        type: 'Feature',
+        properties: {
+            title: 'Char',
+            id: '1',
+        },
+        geometry: {
+            type: 'Point',
+            coordinates: [-73.9915, 40.6848]
+        }
+    },
+    {
+        type: 'Feature',
+        properties: {
+            title: 'Chuko',
+            id: '2',
+        },
+        geometry: {
+            type: 'Point',
+            coordinates: [-73.9680, 40.6802]
+        }
+    },
+    {
+        type: 'Feature',
+        properties: {
+            title: 'Shake Shack',
+            id: '3',
+            // "description": "155 9th St, San Francisco",
+            "marker-color": "#fc4353",
+            "marker-size": "large",
+            "marker-symbol": "harbor"
+        },
+        geometry: {
+            type: 'Point',
+            coordinates: [-73.9889, 40.6917]
+        }
+    },
+    {
+        type: 'Feature',
+        properties: {
+            title: 'Prospect Park',
+            id: '4',
+        },
+        geometry: {
+            type: 'Point',
+            coordinates: [-73.9704, 40.6653]
+        }
+    }]
+};
 
-var spots = mapbox.markers.layer()
-  // Load up markers from geojson data.
-  .features(geojson)
-  // Define a new factory function. Takes geojson input and returns a
-  // DOM element that represents the point.
+// Add markers to the map
+map.markerLayer.setGeoJSON(geoJson);
 
+// Array of all markers
+var markers = [];
+map.markerLayer.eachLayer(function(marker) { markers.push(marker); });
 
-// Creates the map with tile and marker layers and
-// no input handlers (mouse drag, scrollwheel, etc).
-var map = mapbox.map('map', [tiles, spots], null, []);
+// Array of location elements.
+var locations = document.getElementsByClassName('location');
 
-// Array of story section elements.
-var sections = document.getElementsByClassName('location');
+// Helper to set the active location.
+var setActive = function(index) {
+  // Set active class on locations.
+  _(locations).each(function(s) { s.className = s.className.replace(' active', '') });
+  locations[index].className += ' active';
+  // Move to marker and open
+  map.panTo(markers[index].getLatLng());
+  markers[index].openPopup();
 
-// Array of marker elements with order matching section elements.
-var markers = _(sections).map(function(section) {
-  return _(spots.markers()).find(function(m) {
-    return m.data.properties.id === section.id;
-  });
-});
+  // Set a body class for the active location.
+  document.body.className = 'location-' + index;
 
-// Helper to set the active section.
-var setActive = function(index, ease) {
-  // Set active class on sections, markers.
-  _(sections).each(function(s) { s.className = s.className.replace(' active', '') });
-  _(markers).each(function(m) { m.element.className = m.element.className.replace(' active', '') });
-  sections[index].className += ' active';
-  markers[index].element.className += ' active';
-
-  // Set a body class for the active section.
-  document.body.className = 'section-' + index;
-
-  // Ease map to active marker.
-  if (!ease) {
-    map.centerzoom(markers[index].location, markers[index].data.properties.zoom||14);
-  } else { map.ease.location(markers[index].location).zoom(markers[index].data.properties.zoom||14).optimal(0.5, 1.00);
-  }
-
+  // TODO: bring back easing
+  // // Ease map to active marker.
+  // if (!ease) {
+  //   map.centerzoom(markers[index].location, markers[index].data.properties.zoom||14);
+  // } else {
+  //   map.ease.location(markers[index].location).zoom(markers[index].data.properties.zoom||14).optimal(0.5, 1.00);
+  // }
   return true;
 };
+
+// Move the map and open a popup when you click on a marker
+map.markerLayer.on('click', function(e) {
+  // map.panTo(e.layer.getLatLng());
+  // e.openPopup();
+  setActive(e.feature.properties.id);
+});
 
 // Bind to scroll events to find the active section.
 // window.onscroll = _(function() {
@@ -160,16 +211,16 @@ var setActive = function(index, ease) {
 //   // scroll position wins and exits the loop early.
 //   var memo = 0;
 //   var buffer = (h * 0.3333);
-//   var active = _(sections).any(function(el, index) {
+//   var active = _(locations).any(function(el, index) {
 //     memo += el.offsetHeight;
 //     return y < (memo-buffer) ? setActive(index, true) : false;
 //   });
 //
 //   // If no section was set active the user has scrolled past the last section.
 //   // Set the last section active.
-//   if (!active) setActive(sections.length - 1, true);
+//   if (!active) setActive(locations.length - 1, true);
 // }).debounce(10);
 
 // Set map to first section.
-setActive(0, false);
+setActive(0);
 </script>
