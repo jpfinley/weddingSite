@@ -8,7 +8,8 @@
 
 # TODO
 
-- Investigate min-height on body
+- Remove map.css
+- Bring back easing
 
 # Schedule
 
