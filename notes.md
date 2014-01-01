@@ -9,11 +9,12 @@
 # TODO
 
 - Remove map.css
-- Bring back easing
+- Refactor out inline js for Guide
+- Bring back map easing
 
 # Schedule
 
-Add subway directions to the church.
+- Add subway directions to the church.
 
 # Travel
 
