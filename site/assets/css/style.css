@@ -1,13 +1,119 @@
 /* Mecahnics ==================== */
 
 body {
-  padding-top: 70px;
+  padding-top: 50px;
+}
+
+/* Center the navbar */
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
 }
 
 /* General ==================== */
 
+body {
+  font-family: "soleil";
+  color: rgb(102, 102, 102);
+}
+
+h1, h2, h3 {
+  font-family: "Bebas Neue";
+}
+
 ol, ul {
   list-style: none;
+}
+
+/* Colors ==================== */
+
+.navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a, .page-header {
+  color: #F7F1C9;
+}
+
+.navbar {
+  background-color: #E7C586;
+  margin-bottom: 0px;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #F7F1C9;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+border-color: #B99A54;
+}
+
+.navbar-default .navbar-nav>li>a {
+  text-transform: uppercase;
+  font-size: 125%;
+}
+
+.navbar-fixed-top {
+  border-color: #B99A54;
+}
+
+/* Hamburger button */
+.navbar-default .navbar-toggle {
+  border-color: #B99A54;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #B99A54;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #F7F1C9;
+}
+
+/*.navbar-default .navbar-nav>li:hover {
+  background-color: #b99a54;
+  webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}*/
+
+.navbar-default .navbar-nav>li>a:hover {
+  color: #B99A54;
+  webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.jumbotron {
+/*  background-color: #E7C586;*/
+/*  color: #F7F1C9;*/
+background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCI+CjxyZWN0IHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCIgZmlsbD0iI2ZmZmRmNyI+PC9yZWN0Pgo8ZyB0cmFuc2Zvcm09InJvdGF0ZSg0NSkiPgo8cmVjdCB3aWR0aD0iOTkiIGhlaWdodD0iMiIgZmlsbD0iI0U0RERDMiI+PC9yZWN0Pgo8cmVjdCB5PSItNTAiIHdpZHRoPSI5OSIgaGVpZ2h0PSIyIiBmaWxsPSIjRTREREMyIj48L3JlY3Q+CjwvZz4KPC9zdmc+");}
+
+/* Links */
+
+a {
+  color: #75B187;
+}
+
+a:hover, a:focus {
+  color: #85C99A;
+  text-decoration: underline;
+}
+
+.btn-default {
+  color: #75B187;
+  background-color: #FFFFFF;
+  border-color: #75B187;
+}
+
+.btn-default:hover {
+  color: #FFFFFF;
+  background-color: #75B187;
+  border-color: #75B187;
+  webkit-transition: background-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 
 /* Section Rows ==================== */
@@ -75,6 +181,7 @@ header span {
 
 #locations {
   background-color: white;
+  margin-top: 20px;
 }
 
 #pane {

@@ -3,193 +3,196 @@ layout: default
 title: The Wedding of John and Jamie
 ---
 
-<script src='assets/javascripts/underscore-min.js'></script>
-<script src='https://api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.css' rel='stylesheet' />
-<!-- TODO: remove this stylesheet -->
-<link href='assets/css/map.css' rel='stylesheet' />
+<div class="container">
 
-<div id='pane'><div id='map'></div></div>
+  <script src='assets/javascripts/underscore-min.js'></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.css' rel='stylesheet' />
+  <!-- TODO: remove this stylesheet -->
+  <link href='assets/css/map.css' rel='stylesheet' />
 
-<div class="row">
-  <div class="col-md-6" id="locations">
-    <div class="row">
-      <div class="col-md-12 section-location">
-        <h1>Welcome to New York</h1>
-        <p>Let's make one thing clear right from the start: THANK YOU. Making the trip to New York City isn't going to be easy for everyone, and you have a special place in our hearts for making this journey.</p>
-      	<p>If you're in for the weekend, you might have some time to take in the best of what New York has to offer. These are our picks.</p>
+  <div id='pane'><div id='map'></div></div>
+
+  <div class="row">
+    <div class="col-md-6" id="locations">
+      <div class="row">
+        <div class="col-md-12 section-location">
+          <h1>Welcome to New York</h1>
+          <p>Let's make one thing clear right from the start: THANK YOU. Making the trip to New York City isn't going to be easy for everyone, and you have a special place in our hearts for making this journey.</p>
+        	<p>If you're in for the weekend, you might have some time to take in the best of what New York has to offer. These are our picks.</p>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <header>Restaurants</header>
+      <div class="row">
+        <div class="col-md-12">
+          <header>Restaurants</header>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 location" id='char' onclick='setActive(0)'>
-        <h3>Char No. 4</h3>
-        <p>Lots of great whiskey.</p>
-        <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
-        <a class="btn btn-default btn-sm" href="#" role="button">Reviews</a>
-        <a class="btn btn-default btn-sm" href="#" role="button">WWW</a>
+      <div class="row">
+        <div class="col-md-12 location" id='char' onclick='setActive(0)'>
+          <h3>Char No. 4</h3>
+          <p>Lots of great whiskey.</p>
+          <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
+          <a class="btn btn-default btn-sm" href="#" role="button">Reviews</a>
+          <a class="btn btn-default btn-sm" href="#" role="button">WWW</a>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 location" id='chuko' onclick='setActive(1)'>
-        <h3>Chuko</h3>
-        <p>This is a ramen restaurant near our house.</p>
-        <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
-        <a class="btn btn-default btn-sm" href="#" role="button">Reviews</a>
-        <a class="btn btn-default btn-sm" href="#" role="button">WWW</a>
+      <div class="row">
+        <div class="col-md-12 location" id='chuko' onclick='setActive(1)'>
+          <h3>Chuko</h3>
+          <p>This is a ramen restaurant near our house.</p>
+          <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
+          <a class="btn btn-default btn-sm" href="#" role="button">Reviews</a>
+          <a class="btn btn-default btn-sm" href="#" role="button">WWW</a>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 location" id='shack' onclick='setActive(2)'>
-        <h3>Shake Shack</h3>
-        <p>Get the double stack!</p>
-        <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
-        <a class="btn btn-default btn-sm" href="#" role="button">Reviews</a>
-        <a class="btn btn-default btn-sm" href="#" role="button">WWW</a>
+      <div class="row">
+        <div class="col-md-12 location" id='shack' onclick='setActive(2)'>
+          <h3>Shake Shack</h3>
+          <p>Get the double stack!</p>
+          <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
+          <a class="btn btn-default btn-sm" href="#" role="button">Reviews</a>
+          <a class="btn btn-default btn-sm" href="#" role="button">WWW</a>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 location" id='prospect' onclick='setActive(3)'>
-        <h3>Prospect Park</h3>
-        <p>Enjoy a nice stroll around the park.</p>
-        <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
-        <a class="btn btn-default btn-sm" href="#" role="button">Reviews</a>
-        <a class="btn btn-default btn-sm" href="#" role="button">WWW</a>
+      <div class="row">
+        <div class="col-md-12 location" id='prospect' onclick='setActive(3)'>
+          <h3>Prospect Park</h3>
+          <p>Enjoy a nice stroll around the park.</p>
+          <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
+          <a class="btn btn-default btn-sm" href="#" role="button">Reviews</a>
+          <a class="btn btn-default btn-sm" href="#" role="button">WWW</a>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <header>Bars</header>
+      <div class="row">
+        <div class="col-md-12">
+          <header>Bars</header>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 location" id='amsterdam' onclick='setActive(4)'>
-        <h3>Amsterdam 106</h3>
-        <p>We had our first date here.</p>
-        <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
-        <a class="btn btn-default btn-sm" href="#" role="button">Reviews</a>
-        <a class="btn btn-default btn-sm" href="#" role="button">WWW</a>
+      <div class="row">
+        <div class="col-md-12 location" id='amsterdam' onclick='setActive(4)'>
+          <h3>Amsterdam 106</h3>
+          <p>We had our first date here.</p>
+          <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
+          <a class="btn btn-default btn-sm" href="#" role="button">Reviews</a>
+          <a class="btn btn-default btn-sm" href="#" role="button">WWW</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<script>
-  // Make this map happen
-  var map = L.mapbox.map('map', 'jpinley.gk82f9l5', {
-    scrollWheelZoom: false,
-    doubleClickZoom: false,
-    zoomControl: false
-  })
-    .setView([40.6853, -73.9755], 14);
+  <script>
+    // Make this map happen
+    var map = L.mapbox.map('map', 'jpinley.gk82f9l5', {
+      scrollWheelZoom: false,
+      doubleClickZoom: false,
+      zoomControl: false
+    })
+      .setView([40.6853, -73.9755], 14);
 
-  var geoJson = {
-      type: 'FeatureCollection',
-      features: [
-      {
-          type: 'Feature',
-          properties: {
-              title: 'Char',
-              id: 'char',
-              rank: '1',
-              "marker-color": "#fc4353",
-              "marker-size": "large",
-              "marker-symbol": "restaurant"
-          },
-          geometry: {
-              type: 'Point',
-              coordinates: [-73.9915, 40.6848]
-          }
-      },
-      {
-          type: 'Feature',
-          properties: {
-              title: 'Chuko',
-              id: 'chuko',
-              rank: '2',
-              "marker-color": "#fc4353",
-              "marker-size": "large",
-              "marker-symbol": "restaurant"
-          },
-          geometry: {
-              type: 'Point',
-              coordinates: [-73.9680, 40.6802]
-          }
-      },
-      {
-          type: 'Feature',
-          properties: {
-              title: 'Shake Shack',
-              id: 'shack',
-              rank: '3',
-              "marker-color": "#fc4353",
-              "marker-size": "large",
-              "marker-symbol": "fast-food"
-          },
-          geometry: {
-              type: 'Point',
-              coordinates: [-73.9889, 40.6917]
-          }
-      },
-      {
-          type: 'Feature',
-          properties: {
-              title: 'Prospect Park',
-              id: 'prospect',
-              rank: '4',
-              "marker-color": "#fc4353",
-              "marker-size": "large",
-              "marker-symbol": "park2"
-          },
-          geometry: {
-              type: 'Point',
-              coordinates: [-73.9704, 40.6653]
-          }
-      }]
-  };
+    var geoJson = {
+        type: 'FeatureCollection',
+        features: [
+        {
+            type: 'Feature',
+            properties: {
+                title: 'Char',
+                id: 'char',
+                rank: '1',
+                "marker-color": "#fc4353",
+                "marker-size": "large",
+                "marker-symbol": "restaurant"
+            },
+            geometry: {
+                type: 'Point',
+                coordinates: [-73.9915, 40.6848]
+            }
+        },
+        {
+            type: 'Feature',
+            properties: {
+                title: 'Chuko',
+                id: 'chuko',
+                rank: '2',
+                "marker-color": "#fc4353",
+                "marker-size": "large",
+                "marker-symbol": "restaurant"
+            },
+            geometry: {
+                type: 'Point',
+                coordinates: [-73.9680, 40.6802]
+            }
+        },
+        {
+            type: 'Feature',
+            properties: {
+                title: 'Shake Shack',
+                id: 'shack',
+                rank: '3',
+                "marker-color": "#fc4353",
+                "marker-size": "large",
+                "marker-symbol": "fast-food"
+            },
+            geometry: {
+                type: 'Point',
+                coordinates: [-73.9889, 40.6917]
+            }
+        },
+        {
+            type: 'Feature',
+            properties: {
+                title: 'Prospect Park',
+                id: 'prospect',
+                rank: '4',
+                "marker-color": "#fc4353",
+                "marker-size": "large",
+                "marker-symbol": "park2"
+            },
+            geometry: {
+                type: 'Point',
+                coordinates: [-73.9704, 40.6653]
+            }
+        }]
+    };
 
-  // Add markers to the map
-  map.markerLayer.setGeoJSON(geoJson);
+    // Add markers to the map
+    map.markerLayer.setGeoJSON(geoJson);
 
-  // Array of all markers
-  var markers = [];
-  map.markerLayer.eachLayer(function(marker) { markers.push(marker); });
+    // Array of all markers
+    var markers = [];
+    map.markerLayer.eachLayer(function(marker) { markers.push(marker); });
 
-  // Array of location elements.
-  var locations = document.getElementsByClassName('location');
+    // Array of location elements.
+    var locations = document.getElementsByClassName('location');
 
-  // Helper to set the active location.
-  var setActive = function(index) {
-    // Set active class on locations.
-    _(locations).each(function(s) { s.className = s.className.replace(' active', '') });
-    locations[index].className += ' active';
-    // Move to marker and open
-    // TODO: bring back easing
-    map.panTo(markers[index].getLatLng());
-    markers[index].openPopup();
+    // Helper to set the active location.
+    var setActive = function(index) {
+      // Set active class on locations.
+      _(locations).each(function(s) { s.className = s.className.replace(' active', '') });
+      locations[index].className += ' active';
+      // Move to marker and open
+      // TODO: bring back easing
+      map.panTo(markers[index].getLatLng());
+      markers[index].openPopup();
 
-    // Set a body class for the active location.
-    document.body.className = 'location-' + index;
+      // Set a body class for the active location.
+      document.body.className = 'location-' + index;
 
-    return true;
-  };
+      return true;
+    };
 
-  // Scroll the page to the clicked marker's section
-  function scrollIntoView(element){
-    $("html,body").animate({ scrollTop: $(element).offset().top - 110 }, 0);
-  }
+    // Scroll the page to the clicked marker's section
+    function scrollIntoView(element){
+      $("html,body").animate({ scrollTop: $(element).offset().top - 110 }, 0);
+    }
   
-  // Move the map and open a popup when you click on a marker
-  map.markerLayer.on('click', function(e) {
-    setActive(e.layer.feature.properties.rank - 1);
-    scrollIntoView(document.getElementById(e.layer.feature.properties.id));
-  });
+    // Move the map and open a popup when you click on a marker
+    map.markerLayer.on('click', function(e) {
+      setActive(e.layer.feature.properties.rank - 1);
+      scrollIntoView(document.getElementById(e.layer.feature.properties.id));
+    });
 
-  // Set map to fit marker boundary.
-  map.fitBounds(map.markerLayer.getBounds());
+    // Set map to fit marker boundary.
+    map.fitBounds(map.markerLayer.getBounds());
 
-</script>
+  </script>
+</div> <!-- /container -->
