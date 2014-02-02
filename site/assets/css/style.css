@@ -1,7 +1,7 @@
 /* Mecahnics ==================== */
 
 body {
-  padding-top: 70px;
+  padding-top: 50px;
 }
 
 /* Center the navbar */
@@ -22,7 +22,7 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: "pt-serif";
+  font-family: "Bebas Neue";
 }
 
 ol, ul {
@@ -37,6 +37,7 @@ ol, ul {
 
 .navbar {
   background-color: #E7C586;
+  margin-bottom: 0px;
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
@@ -84,9 +85,10 @@ border-color: #B99A54;
   transition: color 0.2s linear;
 }
 
-.page-header {
-  background-color: #A0334E;
-}
+.jumbotron {
+/*  background-color: #E7C586;*/
+/*  color: #F7F1C9;*/
+background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCI+CjxyZWN0IHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCIgZmlsbD0iI2ZmZmRmNyI+PC9yZWN0Pgo8ZyB0cmFuc2Zvcm09InJvdGF0ZSg0NSkiPgo8cmVjdCB3aWR0aD0iOTkiIGhlaWdodD0iMiIgZmlsbD0iI0U0RERDMiI+PC9yZWN0Pgo8cmVjdCB5PSItNTAiIHdpZHRoPSI5OSIgaGVpZ2h0PSIyIiBmaWxsPSIjRTREREMyIj48L3JlY3Q+CjwvZz4KPC9zdmc+");}
 
 /* Links */
 
@@ -179,6 +181,7 @@ header span {
 
 #locations {
   background-color: white;
+  margin-top: 20px;
 }
 
 #pane {
