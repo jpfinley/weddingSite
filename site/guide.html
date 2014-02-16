@@ -3,6 +3,16 @@ layout: default
 title: The Wedding of John and Jamie
 ---
 
+<div class="jumbotron hidden-md hidden-lg">
+  <div class="container">
+    <div class="col-md-7 col-md-offset-3">
+      <h1>Welcome to New York</h1>
+      <p>Let's make one thing clear right from the start: THANK YOU. Making the trip to New York City isn't going to be easy for everyone, and you have a special place in our hearts for making this journey.</p>
+    	<p>If you're in for the weekend, you might have some time to take in the best of what New York has to offer. These are our picks.</p>
+    </div>
+  </div>
+</div>
+
 <div class="container">
 
   <script src='assets/javascripts/underscore-min.js'></script>
@@ -11,11 +21,11 @@ title: The Wedding of John and Jamie
   <!-- TODO: remove this stylesheet -->
   <link href='assets/css/map.css' rel='stylesheet' />
 
-  <div id='pane' class="hidden-xs"><div id='map'></div></div>
+  <div id='pane' class="visible-md visible-lg"><div id='map'></div></div>
 
   <div class="row">
     <div class="col-md-6" id="locations">
-      <div class="row">
+      <div class="row hidden-xs hidden-sm">
         <div class="col-md-12 section-location">
           <div class="jumbotron">
             <div class="container">

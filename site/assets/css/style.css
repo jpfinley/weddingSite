@@ -180,8 +180,8 @@ header span {
 }
 
 .location.active {
-  background:#222;
-  color:#eee;
+  background-color: #222222;
+  color: #EEEEEE;
 }
 
 #locations {
@@ -197,7 +197,7 @@ header span {
   width:66.6666%;
 }
 
-#map  {
+#map {
   position:absolute;
   top:0px;
   bottom:0px;
@@ -242,14 +242,26 @@ header span {
   .section:first-of-type > div > header {
     border-top: 0px;
   }
+  #locations > .row:nth-of-type(2) > .col-md-12 > header {
+    border-top: 0px;
+  }
+  
   #locations {
     margin-top: 0px;
+  }
+  
+  .location.active {
+    background-color: #FFFFFF;
+    color: rgb(102, 102, 102);
   }
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  
+  .location.active {
+    background-color: #FFFFFF;
+    color: rgb(102, 102, 102);
+  }  
 }
 
 /* Medium devices (desktops, 992px and up) */
