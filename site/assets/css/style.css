@@ -168,6 +168,11 @@ header span {
     margin-bottom: 4em;
 }
 
+.section-location .jumbotron {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .location {
   background-color: white;
   padding: 20px;
@@ -213,4 +218,46 @@ header span {
   margin-top: 0;
   padding-top: 20px;
   border-top: solid 1px #e6e6e6;
+}
+
+
+/* Responsive ==================== */
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+  .jumbotron {
+    padding: 0px;
+    font-size: 97%;
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+    border-bottom: solid 1px #b99a54;
+  }
+  
+  .section-event:nth-of-type(1) {
+    margin-top: 0px;
+  }
+  .section-travel:nth-of-type(1) {
+    margin-top: 0px;
+  }
+  .section:first-of-type > div > header {
+    border-top: 0px;
+  }
+  #locations {
+    margin-top: 0px;
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width:1200px) {
+  
 }
