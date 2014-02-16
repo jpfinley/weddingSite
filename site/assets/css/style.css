@@ -176,7 +176,6 @@ header span {
 .location {
   background-color: white;
   padding: 20px;
-  margin-bottom: 20px;
 }
 
 .location.active {
@@ -249,7 +248,7 @@ header span {
   #locations {
     margin-top: 0px;
   }
-  
+
   .location.active {
     background-color: #FFFFFF;
     color: rgb(102, 102, 102);
@@ -257,7 +256,7 @@ header span {
 }
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (max-width: 991px) and (min-width: 768px) {
   .location.active {
     background-color: #FFFFFF;
     color: rgb(102, 102, 102);
