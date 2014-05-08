@@ -116,6 +116,10 @@ a:hover, a:focus {
   transition: background-color 0.2s linear;
 }
 
+.btn-sm {
+  margin-top: 0.75em;
+}
+
 /* Section Rows ==================== */
 
 .section {
@@ -209,8 +213,8 @@ header span {
 
 /* Travel ==================== */
 
-.section-travel {
-    margin-bottom: 4em;
+.section-travel > div > .btn-sm {
+  margin-bottom: 4em;
 }
 
 .section-travel > div > h3:nth-of-type(1) {
@@ -231,7 +235,7 @@ header span {
     margin-bottom: 0px;
     border-bottom: solid 1px #b99a54;
   }
-  
+
   .section-event:nth-of-type(1) {
     margin-top: 0px;
   }
@@ -244,7 +248,7 @@ header span {
   #locations > .row:nth-of-type(2) > .col-md-12 > header {
     border-top: 0px;
   }
-  
+
   #locations {
     margin-top: 0px;
   }
@@ -260,15 +264,15 @@ header span {
   .location.active {
     background-color: #FFFFFF;
     color: rgb(102, 102, 102);
-  }  
+  }
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  
+
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width:1200px) {
-  
+
 }
