@@ -20,15 +20,12 @@
 - http://www.pinterest.com/pin/50947039508471037/
 - http://www.pinterest.com/pin/252905335298540905/
 
-## Design
-- http://apracticalwedding.com/2014/01/diy-wedding-invitation-design/?
-
 ## Patterns
 - http://www.pinterest.com/pin/114630752989245681/
 - http://codepen.io/anon/pen/HiKyf
 
 # TODO
-- Add content from copy deck
+- Final copy
 - Replace colors
 - Replace fonts
 - Add POIs to map
@@ -39,9 +36,7 @@
 - Refactor out map.css
 - Refactor out inline JS for guide page
 - Bring back map easing if possible
+- infinity bug as footer
 
 # Schedule
 - Add subway directions to the church.
-
-# Travel
-- verify spacing after paragraphs ending in buttons
