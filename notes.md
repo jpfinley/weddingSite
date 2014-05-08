@@ -3,7 +3,7 @@
 /
 |-- Schedule
 |-- Guide
-|-- Travel & Accomodations
+|-- Travel & Accommodations
 |-- Registry
 
 # Links
@@ -28,27 +28,20 @@
 - http://codepen.io/anon/pen/HiKyf
 
 # TODO
-- Remove map.css
-- Refactor out inline js for Guide
-- Bring back map easing
-- Maybe schedule is the homepage
+- Add content from copy deck
+- Replace colors
+- Replace fonts
+- Add POIs to map
+- Import map style
+- Consider homepage
+- Hotel formatting
+- Link to registry
+- Refactor out map.css
+- Refactor out inline JS for guide page
+- Bring back map easing if possible
 
 # Schedule
 - Add subway directions to the church.
 
 # Travel
-## Getting Here
-- Flights and Airports
-- Bus
-
-## Accomodations
-- Hotels we like
-- AirBnb
-
-## Ground transportation
-- Public Transit
-- Taxi
-- Car Service
-
-# Registry
-Jamie to add.
+- verify spacing after paragraphs ending in buttons
