@@ -28,13 +28,14 @@ title: The Wedding of John and Jamie
       <div class="row hidden-xs hidden-sm">
         <div class="col-md-12 section-location">
           <div class="jumbotron">
-            <div class="container">
-              <div class="col-md-5">
+            <!-- FIXME These divs commented out because the col-md-5 was extending full width of the viewprot on desktop sizes and preventing clicks to the markers below it. -->
+            <!-- <div class="container"> -->
+              <!-- <div class="col-md-5"> -->
                 <h1>Welcome to New York</h1>
                 <p>Let's make one thing clear right from the start: THANK YOU. Making the trip to New York City isn't going to be easy for everyone, and you have a special place in our hearts for making this journey.</p>
               	<p>If you're in for the weekend, you might have some time to take in the best of what New York has to offer. These are our picks.</p>
-              </div>
-            </div>
+              <!-- </div> -->
+            <!-- </div> -->
           </div>
           
           
@@ -46,39 +47,74 @@ title: The Wedding of John and Jamie
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12 location" id='char' onclick='setActive(0)'>
+        <div class="col-md-12 location" id='ample' onclick='setActive(0)'>
+          <h3>Ample Hills Creamery</h3>
+          <p>Seriously fantastic ice cream. And we're not just saying that because Jamie worked there one summer. Now with two locations!</p>
+          <a class="btn btn-default btn-sm" href="https://www.google.com/maps/place/Ample+Hills+Creamery" role="button">Map</a>
+          <a class="btn btn-default btn-sm" href="http://4sq.com/jXwVZJ" role="button">Reviews</a>
+          <a class="btn btn-default btn-sm" href="http://amplehills.com" role="button">WWW</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 location" id='char' onclick='setActive(1)'>
           <h3>Char No. 4</h3>
           <p>Lots of great whiskey.</p>
-          <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
-          <a class="btn btn-default btn-sm" href="#" role="button">Reviews</a>
-          <a class="btn btn-default btn-sm" href="#" role="button">WWW</a>
+          <a class="btn btn-default btn-sm" href="https://www.google.com/maps/place/Char+No.+4" role="button">Map</a>
+          <a class="btn btn-default btn-sm" href="http://4sq.com/P8RAd" role="button">Reviews</a>
+          <a class="btn btn-default btn-sm" href="http://charno4.com" role="button">WWW</a>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12 location" id='chuko' onclick='setActive(1)'>
+        <div class="col-md-12 location" id='chuko' onclick='setActive(2)'>
           <h3>Chuko</h3>
           <p>This is a ramen restaurant near our house.</p>
-          <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
-          <a class="btn btn-default btn-sm" href="#" role="button">Reviews</a>
-          <a class="btn btn-default btn-sm" href="#" role="button">WWW</a>
+          <a class="btn btn-default btn-sm" href="https://www.google.com/maps/place/Chuko" role="button">Map</a>
+          <a class="btn btn-default btn-sm" href="http://4sq.com/nUNID7" role="button">Reviews</a>
+          <a class="btn btn-default btn-sm" href="http://barchuko.com" role="button">WWW</a>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12 location" id='shack' onclick='setActive(2)'>
+        <div class="col-md-12 location" id='gran' onclick='setActive(3)'>
+          <h3>Gran Eléctrica</h3>
+          <p>This Mexican restaurant is in the heart of DUMBO, between both Manhattan and Brooklyn br'id'ges.</p>
+          <a class="btn btn-default btn-sm" href="https://www.google.com/maps/place/GRAN%2FELÉCTRICA" role="button">Map</a>
+          <a class="btn btn-default btn-sm" href="http://4sq.com/GMzGCx" role="button">Reviews</a>
+          <a class="btn btn-default btn-sm" href="http://www.granelectrica.com" role="button">WWW</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 location" id='morgans' onclick='setActive(4)'>
+          <h3>Morgan's BBQ</h3>
+          <p>Don't leave without trying the fatty brisket.</p>
+          <a class="btn btn-default btn-sm" href="https://www.google.com/maps/place/Morgans+BBQ" role="button">Map</a>
+          <a class="btn btn-default btn-sm" href="http://4sq.com/16Esq5u" role="button">Reviews</a>
+          <a class="btn btn-default btn-sm" href="http://morgansbrooklynbarbecue.com" role="button">WWW</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 location" id='primrose' onclick='setActive(5)'>
+          <h3>Primrose Cafe</h3>
+          <p>A charming hidden cafe in the heart of Clinton Hill</p>
+          <a class="btn btn-default btn-sm" href="https://www.google.com/maps/place/Primrose+Cafe" role="button">Map</a>
+          <a class="btn btn-default btn-sm" href="http://4sq.com/GCowdN" role="button">Reviews</a>
+          <a class="btn btn-default btn-sm" href="http://www.primrosenyc.com" role="button">WWW</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 location" id='shack' onclick='setActive(6)'>
           <h3>Shake Shack</h3>
-          <p>Get the double stack!</p>
+          <p>A smashed patty and Shack sauce on a soft bun. Yum.</p>
           <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
-          <a class="btn btn-default btn-sm" href="#" role="button">Reviews</a>
-          <a class="btn btn-default btn-sm" href="#" role="button">WWW</a>
+          <a class="btn btn-default btn-sm" href="http://4sq.com/uuqK68" role="button">Reviews</a>
+          <a class="btn btn-default btn-sm" href="http://www.shakeshack.com" role="button">WWW</a>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12 location" id='prospect' onclick='setActive(3)'>
-          <h3>Prospect Park</h3>
-          <p>Enjoy a nice stroll around the park.</p>
-          <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
-          <a class="btn btn-default btn-sm" href="#" role="button">Reviews</a>
-          <a class="btn btn-default btn-sm" href="#" role="button">WWW</a>
+        <div class="col-md-12 location" id='superfine' onclick='setActive(7)'>
+          <h3>Superfine</h3>
+          <p>A smashed patty and Shack sauce on a soft bun. Yum.</p>
+          <a class="btn btn-default btn-sm" href="https://www.google.com/maps/place/Superfine" role="button">Map</a>
+          <a class="btn btn-default btn-sm" href="http://4sq.com/5nYawQ" role="button">Reviews</a>
         </div>
       </div>
       <div class="row">
@@ -87,12 +123,53 @@ title: The Wedding of John and Jamie
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12 location" id='amsterdam' onclick='setActive(4)'>
-          <h3>Amsterdam 106</h3>
-          <p>We had our first date here.</p>
-          <a class="btn btn-default btn-sm" href="#" role="button">Map</a>
-          <a class="btn btn-default btn-sm" href="#" role="button">Reviews</a>
+        <div class="col-md-12 location" id='henry' onclick='setActive(8)'>
+          <h3>Henry Public</h3>
+          <p>This cocktail bar has a great lounge-y feel.</p>
+          <a class="btn btn-default btn-sm" href="https://www.google.com/maps/place/Henry+Public" role="button">Map</a>
+          <a class="btn btn-default btn-sm" href="http://4sq.com/1HPwB4" role="button">Reviews</a>
+          <a class="btn btn-default btn-sm" href="http://henrypublic.com" role="button">WWW</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 location" id='hot' onclick='setActive(9)'>
+          <h3>Hot Bird</h3>
+          <p>Once an auto-body shop, now one of our favorite bars. Nice outdoor area and good for groups.</p>
+          <a class="btn btn-default btn-sm" href="https://www.google.com/maps/place/Hot+Bird" role="button">Map</a>
+          <a class="btn btn-default btn-sm" href="http://4sq.com/a1duta" role="button">Reviews</a>
           <a class="btn btn-default btn-sm" href="#" role="button">WWW</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <header>Points of Interest</header>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 location" id='bridge' onclick='setActive(10)'>
+          <h3>Brooklyn Bridge Park</h3>
+          <p>Come here for a romantic walk with great views of the Manhattan skyline.</p>
+          <a class="btn btn-default btn-sm" href="https://www.google.com/maps/place/Brooklyn+Bridge+Park" role="button">Map</a>
+          <a class="btn btn-default btn-sm" href="http://4sq.com/3KLQGc" role="button">Reviews</a>
+          <a class="btn btn-default btn-sm" href="http://www.brooklynbridgepark.org" role="button">WWW</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 location" id='flea' onclick='setActive(11)'>
+          <h3>Brooklyn Flea Fort Greene</h3>
+          <p>Essentially Brooklyn. An outdoor space where you can buy everything from upcycled furniture to kimchi hot dogs to handmade jewelry.</p>
+          <a class="btn btn-default btn-sm" href="https://www.google.com/maps/place/Brooklyn+Flea+-+Fort+Greene" role="button">Map</a>
+          <a class="btn btn-default btn-sm" href="http://4sq.com/3KLQGc" role="button">Reviews</a>
+          <a class="btn btn-default btn-sm" href="http://www.brooklynflea.com" role="button">WWW</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 location" id='prospect' onclick='setActive(12)'>
+          <h3>Prospect Park</h3>
+          <p>Lakes, waterfalls, rolling meadows, and tree-lined walking paths: the sequel to Central Park has it all.</p>
+          <a class="btn btn-default btn-sm" href="https://www.google.com/maps/place/Prospect+Park" role="button">Map</a>
+          <a class="btn btn-default btn-sm" href="http://4sq.com/4wbhov" role="button">Reviews</a>
+          <a class="btn btn-default btn-sm" href="http://www.prospectpark.org" role="button">WWW</a>
         </div>
       </div>
     </div>
@@ -108,66 +185,201 @@ title: The Wedding of John and Jamie
       .setView([40.6853, -73.9755], 14);
 
     var geoJson = {
-        type: 'FeatureCollection',
-        features: [
+        'type': 'FeatureCollection',
+        'features': [
         {
-            type: 'Feature',
-            properties: {
-                title: 'Char',
-                id: 'char',
-                rank: '1',
+            'type': 'Feature',
+            'properties': {
+                'title': 'Ample Hills Creamery',
+                'id': 'ample',
+                'rank': '1',
+                'marker-color': '#fc4353',
+                'marker-size': 'large',
+                'marker-symbol': 'restaurant'
+            },
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [-73.968394, 40.678613]
+            }
+        },
+        {
+            'type': 'Feature',
+            'properties': {
+                'title': 'Char No. 4',
+                'id': 'char',
+                'rank': '2',
                 "marker-color": "#fc4353",
                 "marker-size": "large",
                 "marker-symbol": "restaurant"
             },
-            geometry: {
-                type: 'Point',
-                coordinates: [-73.9915, 40.6848]
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [-73.991774, 40.685061]
             }
         },
         {
-            type: 'Feature',
-            properties: {
-                title: 'Chuko',
-                id: 'chuko',
-                rank: '2',
+            'type': 'Feature',
+            'properties': {
+                'title': 'Chuko',
+                'id': 'chuko',
+                'rank': '3',
                 "marker-color": "#fc4353",
                 "marker-size": "large",
                 "marker-symbol": "restaurant"
             },
-            geometry: {
-                type: 'Point',
-                coordinates: [-73.9680, 40.6802]
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [-73.9682921, 40.6792415]
             }
         },
         {
-            type: 'Feature',
-            properties: {
-                title: 'Shake Shack',
-                id: 'shack',
-                rank: '3',
+            'type': 'Feature',
+            'properties': {
+                'title': 'Gran Eléctrica',
+                'id': 'gran',
+                'rank': '4',
+                'marker-color': '#fc4353',
+                'marker-size': 'large',
+                'marker-symbol': 'restaurant'
+            },
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [-73.993122, 40.702684]
+            }
+        },
+        {
+            'type': 'Feature',
+            'properties': {
+                'title': 'Morgans BBQ',
+                'id': 'morgans',
+                'rank': '5',
+                'marker-color': '#fc4353',
+                'marker-size': 'large',
+                'marker-symbol': 'restaurant'
+            },
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [-73.974058, 40.679913]
+            }
+        },
+        {
+            'type': 'Feature',
+            'properties': {
+                'title': 'Primrose Cafe',
+                'id': 'primrose',
+                'rank': '6',
+                'marker-color': '#fc4353',
+                'marker-size': 'large',
+                'marker-symbol': 'restaurant'
+            },
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [-73.966237, 40.686782]
+            }
+        },
+        {
+            'type': 'Feature',
+            'properties': {
+                'title': 'Shake Shack',
+                'id': 'shack',
+                'rank': '7',
                 "marker-color": "#fc4353",
                 "marker-size": "large",
                 "marker-symbol": "fast-food"
             },
-            geometry: {
-                type: 'Point',
-                coordinates: [-73.9889, 40.6917]
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [-73.9889, 40.6917]
             }
         },
         {
-            type: 'Feature',
-            properties: {
-                title: 'Prospect Park',
-                id: 'prospect',
-                rank: '4',
-                "marker-color": "#fc4353",
-                "marker-size": "large",
-                "marker-symbol": "park2"
+            'type': 'Feature',
+            'properties': {
+                'title': 'Superfine',
+                'id': 'superfine',
+                'rank': '8',
+                'marker-color': '#fc4353',
+                'marker-size': 'large',
+                'marker-symbol': 'fast-food'
             },
-            geometry: {
-                type: 'Point',
-                coordinates: [-73.9704, 40.6653]
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [-73.987468, 40.702309]
+            }
+        },
+        {
+            'type': 'Feature',
+            'properties': {
+                'title': 'Henry Public',
+                'id': 'henry',
+                'rank': '9',
+                'marker-color': '#fc4353',
+                'marker-size': 'large',
+                'marker-symbol': 'fast-food'
+            },
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [-73.99629, 40.69029]
+            }
+        },
+        {
+            'type': 'Feature',
+            'properties': {
+                'title': 'Hot Bird',
+                'id': 'hot',
+                'rank': '10',
+                'marker-color': '#fc4353',
+                'marker-size': 'large',
+                'marker-symbol': 'fast-food'
+            },
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [-73.966792, 40.681883]
+            }
+        },
+        {
+            'type': 'Feature',
+            'properties': {
+                'title': 'Brooklyn Bridge Park',
+                'id': 'bridge',
+                'rank': '11',
+                'marker-color': '#fc4353',
+                'marker-size': 'large',
+                'marker-symbol': 'fast-food'
+            },
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [-73.9980602, 40.7017617]
+            }
+        },
+        {
+            'type': 'Feature',
+            'properties': {
+                'title': 'Brooklyn Flea Fort Greene',
+                'id': 'flea',
+                'rank': '12',
+                'marker-color': '#fc4353',
+                'marker-size': 'large',
+                'marker-symbol': 'fast-food'
+            },
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [-73.9692182, 40.6874361]
+            }
+        },
+        {
+            'type': 'Feature',
+            'properties': {
+                'title': 'Prospect Park',
+                'id': 'prospect',
+                'rank': '13',
+                'marker-color': '#fc4353',
+                'marker-size': 'large',
+                'marker-symbol': 'park2'
+            },
+            'geometry': {
+                'type': 'Point',
+                'coordinates': [-73.9681225, 40.6692655]
             }
         }]
     };

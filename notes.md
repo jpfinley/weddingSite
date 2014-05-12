@@ -30,6 +30,8 @@
 - Replace fonts
 - Add POIs to map
 - Import map style
+- New map API
+- Correct map markers
 - Consider homepage
 - Hotel formatting
 - Link to registry
