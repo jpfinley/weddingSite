@@ -24,21 +24,5 @@
 - http://www.pinterest.com/pin/114630752989245681/
 - http://codepen.io/anon/pen/HiKyf
 
-# TODO
-- Final copy
-- Replace colors
-- Replace fonts
-- Add POIs to map
-- Import map style
-- New map API
-- Correct map markers
-- Consider homepage
-- Hotel formatting
-- Link to registry
-- Refactor out map.css
-- Refactor out inline JS for guide page
-- Bring back map easing if possible
-- infinity bug as footer
-
 # Schedule
 - Add subway directions to the church.
