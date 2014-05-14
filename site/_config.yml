@@ -1,3 +1,3 @@
 name: The Wedding of John and Jamie
 markdown: redcarpet
-pygments: true
+highlighter: pygments
