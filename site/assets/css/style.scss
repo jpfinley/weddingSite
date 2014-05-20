@@ -3,16 +3,21 @@
 
 /* Variables ==================== */
 
-$navbar-type-color: #F7F1C9;
-$navbar-background-color: #E7C586;
-$main-type-color: #666666;
-$light-type-color: #888888;
-$accent-dark-color: #b99a54;
-$white-color: #FFFFFF;
-$gray-stroke-color: #E6E6E6;
+$amount:                                                     30;
 
-$pop-color: #75B187;
-$pop-hover-color: #85C99A;
+$primary-color:                                         #E7C586;
+$accent-dark-color:             darken($primary-color, $amount);   /*#B99A54*/
+$accent-light-color:       lighten($primary-color, $amount / 2);
+                                              
+$pop-color:                              invert($primary-color);   /*#75B187;*/
+$pop-hover-color:                  lighten($pop-color, $amount);   /*#85C99A;*/
+                                              
+$main-type-color:                                       #666666;
+$light-type-color:       lighten($main-type-color, $amount / 2);   /*888888*/
+$navbar-type-color:                          $accent-dark-color;   /*#F7F1C9;*/
+                                              
+$gray-stroke-color:    lighten($main-type-color, $amount * 1.5);   /*#E6E6E6;*/
+$white-color:                                           #FFFFFF;
 
 /* Mecahnics ==================== */
 
@@ -53,7 +58,7 @@ ol, ul {
 }
 
 .navbar {
-  background-color: $navbar-background-color;
+  background-color: $primary-color;
   margin-bottom: 0px;
 }
 
@@ -96,14 +101,14 @@ ol, ul {
 }*/
 
 .navbar-default .navbar-nav>li>a:hover {
-  color: $accent-dark-color;
+  color: $accent-light-color;
   webkit-transition: color 0.2s linear;
   -moz-transition: color 0.2s linear;
   transition: color 0.2s linear;
 }
 
 .jumbotron {
-/*  background-color: $navbar-background-color;*/
+/*  background-color: $primary-color;*/
 /*  color: $navbar-type-color;*/
 background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCI+CjxyZWN0IHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCIgZmlsbD0iI2ZmZmRmNyI+PC9yZWN0Pgo8ZyB0cmFuc2Zvcm09InJvdGF0ZSg0NSkiPgo8cmVjdCB3aWR0aD0iOTkiIGhlaWdodD0iMiIgZmlsbD0iI0U0RERDMiI+PC9yZWN0Pgo8cmVjdCB5PSItNTAiIHdpZHRoPSI5OSIgaGVpZ2h0PSIyIiBmaWxsPSIjRTREREMyIj48L3JlY3Q+CjwvZz4KPC9zdmc+");}
 
