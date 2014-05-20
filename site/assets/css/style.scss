@@ -5,8 +5,8 @@
 
 $amount:                                                     30;
 
-$primary-color:                                         #E7C586;
-$accent-dark-color:             darken($primary-color, $amount);   /*#B99A54*/
+$primary-color:                                         #4F4044;
+$accent-dark-color:         #8B6F83;    /*darken($primary-color, $amount);*/   /*#B99A54*/
 $accent-light-color:       lighten($primary-color, $amount / 2);
                                               
 $pop-color:                              invert($primary-color);   /*#75B187;*/
@@ -58,7 +58,7 @@ ol, ul {
 }
 
 .navbar {
-  background-color: $primary-color;
+  background-color: $white-color;
   margin-bottom: 0px;
 }
 
