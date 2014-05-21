@@ -1,3 +1,27 @@
+---
+---
+
+/* Variables ==================== */
+
+$amount:                                                     30;
+
+$serif-font:                                           "adelle";
+$sans-font:                                 "brandon-grotesque";
+
+$primary-color:                                         #AA6376;
+$accent-dark-color:         darken($primary-color, $amount / 2);
+$accent-light-color:       lighten($primary-color, $amount / 2);
+                                              
+$pop-color:                                             #508A83;
+$pop-hover-color:                                       #9AD4C3;
+                                              
+$main-type-color:                                       #666666;
+$light-type-color:       lighten($main-type-color, $amount / 2);
+$just-off-white-type-color:                             #FCFCFC;
+                                              
+$gray-stroke-color:    lighten($main-type-color, $amount * 1.5);
+$white-color:                                           #FFFFFF;
+
 /* Mecahnics ==================== */
 
 body {
@@ -6,23 +30,24 @@ body {
 
 /* Center the navbar */
 .navbar .navbar-nav {
-    display: inline-block;
-    float: none;
+  display: inline-block;
+  float: none;
 }
 
 .navbar .navbar-collapse {
-    text-align: center;
+  text-align: center;
 }
 
 /* General ==================== */
 
 body {
-  font-family: "soleil";
-  color: rgb(102, 102, 102);
+  font-family: $serif-font;
+  font-weight: 300;
+  color: $main-type-color;
 }
 
-h1, h2, h3 {
-  font-family: "Bebas Neue";
+h1, h2, h3, h4, h5, h6 {
+  font-family: $sans-font;
 }
 
 ol, ul {
@@ -32,85 +57,87 @@ ol, ul {
 /* Colors ==================== */
 
 .navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a, .page-header {
-  color: #F7F1C9;
+  color: $just-off-white-type-color;
 }
 
 .navbar {
-  background-color: #E7C586;
+  background-color: $primary-color;
   margin-bottom: 0px;
+  border-bottom-width: 3px;
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #F7F1C9;
+  color: $just-off-white-type-color;
   background-color: transparent;
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-border-color: #B99A54;
+  border-color: $accent-dark-color;
 }
 
 .navbar-default .navbar-nav>li>a {
   text-transform: uppercase;
+  font-family: $sans-font;
   font-size: 125%;
 }
 
 .navbar-fixed-top {
-  border-color: #B99A54;
+  border-color: $accent-dark-color;
 }
 
 /* Hamburger button */
 .navbar-default .navbar-toggle {
-  border-color: #B99A54;
+  border-color: $accent-dark-color;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #B99A54;
+  background-color: $accent-dark-color;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #F7F1C9;
+  background-color: $just-off-white-type-color;
 }
 
 /*.navbar-default .navbar-nav>li:hover {
-  background-color: #b99a54;
+  background-color: $accent-dark-color;
   webkit-transition: background-color 0.2s linear;
   -moz-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
 }*/
 
 .navbar-default .navbar-nav>li>a:hover {
-  color: #B99A54;
+  color: $accent-dark-color;
   webkit-transition: color 0.2s linear;
   -moz-transition: color 0.2s linear;
   transition: color 0.2s linear;
 }
 
 .jumbotron {
-/*  background-color: #E7C586;*/
-/*  color: #F7F1C9;*/
-background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCI+CjxyZWN0IHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCIgZmlsbD0iI2ZmZmRmNyI+PC9yZWN0Pgo8ZyB0cmFuc2Zvcm09InJvdGF0ZSg0NSkiPgo8cmVjdCB3aWR0aD0iOTkiIGhlaWdodD0iMiIgZmlsbD0iI0U0RERDMiI+PC9yZWN0Pgo8cmVjdCB5PSItNTAiIHdpZHRoPSI5OSIgaGVpZ2h0PSIyIiBmaWxsPSIjRTREREMyIj48L3JlY3Q+CjwvZz4KPC9zdmc+");}
+  background-color: $just-off-white-type-color;
+  /*  color: $navbar-type-color;*/
+}
 
 /* Links */
 
 a {
-  color: #75B187;
+  color: $pop-color;
 }
 
 a:hover, a:focus {
-  color: #85C99A;
+  color: $pop-hover-color;
   text-decoration: underline;
 }
 
 .btn-default {
-  color: #75B187;
-  background-color: #FFFFFF;
-  border-color: #75B187;
+  color: $pop-color;
+  background-color: $white-color;
+  border-color: $pop-color;
 }
 
 .btn-default:hover {
-  color: #FFFFFF;
-  background-color: #75B187;
-  border-color: #75B187;
+  color: $pop-color;
+  background-color: $pop-hover-color;
+  border-color: $pop-hover-color;
   webkit-transition: background-color 0.2s linear;
   -moz-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
@@ -128,22 +155,22 @@ a:hover, a:focus {
 
 header {
   padding-top: 30px;
-  border-top: solid 1px #b99a54;
-  color: #b99a54;
+  border-top: solid 1px $accent-dark-color;
+  color: $primary-color;
 }
 
 .section h2 {
   margin-top: 0;
   padding-top: 20px;
-  border-top: solid 1px #e6e6e6;
+  border-top: solid 1px $gray-stroke-color;
 }
 
 .section h3 {
-  color: #888888;
+  color: $light-type-color;
 }
 
 .section > div > small span a {
-  background-color: #e6e6e6;
+  background-color: $gray-stroke-color;
   padding: 10px 20px;
   margin-right: 10px;
 }
@@ -170,11 +197,11 @@ header {
 /* Schedule ==================== */
 
 header span {
-  color: #b3b3b3;
+  color: $gray-stroke-color;
 }
 
 .section-event {
-    margin-bottom: 4em;
+  margin-bottom: 4em;
 }
 
 /* Set the first section away from the header */
@@ -188,7 +215,7 @@ header span {
 /* Guide ==================== */
 
 .section-location {
-    margin-bottom: 4em;
+  margin-bottom: 4em;
 }
 
 .section-location .jumbotron {
@@ -202,8 +229,8 @@ header span {
 }
 
 .location.active {
-  background-color: #222222;
-  color: #EEEEEE;
+  background-color: $pop-color;
+  color: $white-color;
 }
 
 #locations {
@@ -230,6 +257,12 @@ header span {
   -webkit-transition:opacity 250ms;
 }
 
+.marker-title {
+  font-family: $sans-font;
+  font-size: 1.5em;
+  color: $accent-dark-color;
+}
+
 /* Travel ==================== */
 
 .section-travel > div > .btn-sm {
@@ -239,7 +272,7 @@ header span {
 .section-travel > div > h3:nth-of-type(1) {
   margin-top: 0;
   padding-top: 20px;
-  border-top: solid 1px #e6e6e6;
+  border-top: solid 1px $gray-stroke-color;
 }
 
 
@@ -252,7 +285,7 @@ header span {
     font-size: 97%;
     padding-bottom: 20px;
     margin-bottom: 0px;
-    border-bottom: solid 1px #b99a54;
+    border-bottom: solid 1px $accent-dark-color;
   }
 
   .section-event:nth-of-type(1) {
@@ -273,16 +306,16 @@ header span {
   }
 
   .location.active {
-    background-color: #FFFFFF;
-    color: rgb(102, 102, 102);
+    background-color: $white-color;
+    color: $main-type-color;
   }
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 991px) and (min-width: 768px) {
   .location.active {
-    background-color: #FFFFFF;
-    color: rgb(102, 102, 102);
+    background-color: $white-color;
+    color: $main-type-color;
   }
 }
 
