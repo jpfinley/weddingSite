@@ -257,6 +257,12 @@ header span {
   -webkit-transition:opacity 250ms;
 }
 
+.marker-title {
+  font-family: $sans-font;
+  font-size: 1.5em;
+  color: $accent-dark-color;
+}
+
 /* Travel ==================== */
 
 .section-travel > div > .btn-sm {
