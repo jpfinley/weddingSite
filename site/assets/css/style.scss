@@ -5,16 +5,19 @@
 
 $amount:                                                     30;
 
-$primary-color:                                         #4F4044;
-$accent-dark-color:         #8B6F83;    /*darken($primary-color, $amount);*/   /*#B99A54*/
+$serif-font:                                           "adelle";
+$sans-font:                                 "brandon-grotesque";
+
+$primary-color:                                         #aa6376;   //#724a55;
+$accent-dark-color:         darken($primary-color, $amount / 2);   //#B99A54
 $accent-light-color:       lighten($primary-color, $amount / 2);
                                               
-$pop-color:                              invert($primary-color);   /*#75B187;*/
-$pop-hover-color:                  lighten($pop-color, $amount);   /*#85C99A;*/
+$pop-color:                             #508A83; //invert($primary-color);   #75B187
+$pop-hover-color:                  #9AD4C3;      //lighten($pop-color, $amount);   /*#85C99A;*/
                                               
 $main-type-color:                                       #666666;
 $light-type-color:       lighten($main-type-color, $amount / 2);   /*888888*/
-$navbar-type-color:                          $accent-dark-color;   /*#F7F1C9;*/
+$just-off-white-type-color:                             #fcfcfc;   /*#F7F1C9;*/
                                               
 $gray-stroke-color:    lighten($main-type-color, $amount * 1.5);   /*#E6E6E6;*/
 $white-color:                                           #FFFFFF;
@@ -38,13 +41,13 @@ body {
 /* General ==================== */
 
 body {
-  font-family: "adelle";
+  font-family: $serif-font;
   font-weight: 300;
   color: $main-type-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "brandon-grotesque";
+  font-family: $sans-font;
 }
 
 ol, ul {
@@ -54,16 +57,17 @@ ol, ul {
 /* Colors ==================== */
 
 .navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a, .page-header {
-  color: $navbar-type-color;
+  color: $just-off-white-type-color;
 }
 
 .navbar {
-  background-color: $white-color;
+  background-color: $primary-color;
   margin-bottom: 0px;
+  border-bottom-width: 3px;
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: $navbar-type-color;
+  color: $just-off-white-type-color;
   background-color: transparent;
 }
 
@@ -73,6 +77,7 @@ ol, ul {
 
 .navbar-default .navbar-nav>li>a {
   text-transform: uppercase;
+  font-family: $sans-font;
   font-size: 125%;
 }
 
@@ -90,7 +95,7 @@ ol, ul {
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: $navbar-type-color;
+  background-color: $just-off-white-type-color;
 }
 
 /*.navbar-default .navbar-nav>li:hover {
@@ -101,16 +106,17 @@ ol, ul {
 }*/
 
 .navbar-default .navbar-nav>li>a:hover {
-  color: $accent-light-color;
+  color: $accent-dark-color;
   webkit-transition: color 0.2s linear;
   -moz-transition: color 0.2s linear;
   transition: color 0.2s linear;
 }
 
 .jumbotron {
-/*  background-color: $primary-color;*/
-/*  color: $navbar-type-color;*/
-background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCI+CjxyZWN0IHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCIgZmlsbD0iI2ZmZmRmNyI+PC9yZWN0Pgo8ZyB0cmFuc2Zvcm09InJvdGF0ZSg0NSkiPgo8cmVjdCB3aWR0aD0iOTkiIGhlaWdodD0iMiIgZmlsbD0iI0U0RERDMiI+PC9yZWN0Pgo8cmVjdCB5PSItNTAiIHdpZHRoPSI5OSIgaGVpZ2h0PSIyIiBmaWxsPSIjRTREREMyIj48L3JlY3Q+CjwvZz4KPC9zdmc+");}
+  background-color: #fcfcfc;
+  /*  color: $navbar-type-color;*/
+//  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCI+CjxyZWN0IHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCIgZmlsbD0iI2ZmZmRmNyI+PC9yZWN0Pgo8ZyB0cmFuc2Zvcm09InJvdGF0ZSg0NSkiPgo8cmVjdCB3aWR0aD0iOTkiIGhlaWdodD0iMiIgZmlsbD0iI0U0RERDMiI+PC9yZWN0Pgo8cmVjdCB5PSItNTAiIHdpZHRoPSI5OSIgaGVpZ2h0PSIyIiBmaWxsPSIjRTREREMyIj48L3JlY3Q+CjwvZz4KPC9zdmc+");
+}
 
 /* Links */
 
@@ -130,9 +136,9 @@ a:hover, a:focus {
 }
 
 .btn-default:hover {
-  color: $white-color;
-  background-color: $pop-color;
-  border-color: $pop-color;
+  color: $pop-color;
+  background-color: $pop-hover-color;
+  border-color: $pop-hover-color;
   webkit-transition: background-color 0.2s linear;
   -moz-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
@@ -151,7 +157,7 @@ a:hover, a:focus {
 header {
   padding-top: 30px;
   border-top: solid 1px $accent-dark-color;
-  color: $accent-dark-color;
+  color: $primary-color;
 }
 
 .section h2 {
