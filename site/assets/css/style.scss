@@ -8,18 +8,18 @@ $amount:                                                     30;
 $serif-font:                                           "adelle";
 $sans-font:                                 "brandon-grotesque";
 
-$primary-color:                                         #aa6376;   //#724a55;
-$accent-dark-color:         darken($primary-color, $amount / 2);   //#B99A54
+$primary-color:                                         #AA6376;
+$accent-dark-color:         darken($primary-color, $amount / 2);
 $accent-light-color:       lighten($primary-color, $amount / 2);
                                               
-$pop-color:                             #508A83; //invert($primary-color);   #75B187
-$pop-hover-color:                  #9AD4C3;      //lighten($pop-color, $amount);   /*#85C99A;*/
+$pop-color:                                             #508A83;
+$pop-hover-color:                                       #9AD4C3;
                                               
 $main-type-color:                                       #666666;
-$light-type-color:       lighten($main-type-color, $amount / 2);   /*888888*/
-$just-off-white-type-color:                             #fcfcfc;   /*#F7F1C9;*/
+$light-type-color:       lighten($main-type-color, $amount / 2);
+$just-off-white-type-color:                             #FCFCFC;
                                               
-$gray-stroke-color:    lighten($main-type-color, $amount * 1.5);   /*#E6E6E6;*/
+$gray-stroke-color:    lighten($main-type-color, $amount * 1.5);
 $white-color:                                           #FFFFFF;
 
 /* Mecahnics ==================== */
@@ -30,12 +30,12 @@ body {
 
 /* Center the navbar */
 .navbar .navbar-nav {
-    display: inline-block;
-    float: none;
+  display: inline-block;
+  float: none;
 }
 
 .navbar .navbar-collapse {
-    text-align: center;
+  text-align: center;
 }
 
 /* General ==================== */
@@ -113,9 +113,8 @@ ol, ul {
 }
 
 .jumbotron {
-  background-color: #fcfcfc;
+  background-color: $just-off-white-type-color;
   /*  color: $navbar-type-color;*/
-//  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCI+CjxyZWN0IHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCIgZmlsbD0iI2ZmZmRmNyI+PC9yZWN0Pgo8ZyB0cmFuc2Zvcm09InJvdGF0ZSg0NSkiPgo8cmVjdCB3aWR0aD0iOTkiIGhlaWdodD0iMiIgZmlsbD0iI0U0RERDMiI+PC9yZWN0Pgo8cmVjdCB5PSItNTAiIHdpZHRoPSI5OSIgaGVpZ2h0PSIyIiBmaWxsPSIjRTREREMyIj48L3JlY3Q+CjwvZz4KPC9zdmc+");
 }
 
 /* Links */
@@ -202,7 +201,7 @@ header span {
 }
 
 .section-event {
-    margin-bottom: 4em;
+  margin-bottom: 4em;
 }
 
 /* Set the first section away from the header */
@@ -216,7 +215,7 @@ header span {
 /* Guide ==================== */
 
 .section-location {
-    margin-bottom: 4em;
+  margin-bottom: 4em;
 }
 
 .section-location .jumbotron {
