@@ -54,9 +54,9 @@ ol, ul {
   list-style: none;
 }
 
-/* Colors ==================== */
+/* Navigation ==================== */
 
-.navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a, .page-header {
+.navbar-default .navbar-brand, .navbar-brand>a, .navbar-default .navbar-nav>li>a, .page-header {
   color: $just-off-white-type-color;
 }
 
@@ -64,6 +64,11 @@ ol, ul {
   background-color: $primary-color;
   margin-bottom: 0px;
   border-bottom-width: 3px;
+}
+
+.navbar-brand>a {
+  font-family: $sans-font;
+  font-weight: bold;
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
@@ -105,7 +110,7 @@ ol, ul {
   transition: background-color 0.2s linear;
 }*/
 
-.navbar-default .navbar-nav>li>a:hover {
+.navbar-default .navbar-nav>li>a:hover, .navbar-brand>a:hover {
   color: $accent-dark-color;
   webkit-transition: color 0.2s linear;
   -moz-transition: color 0.2s linear;
@@ -130,7 +135,7 @@ a {
 
 a:hover, a:focus {
   color: $pop-hover-color;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .btn-default {
