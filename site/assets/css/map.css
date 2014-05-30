@@ -1,8 +1,4 @@
 @media (max-width:640px) {
-  body {
-    font-size:12px;
-    line-height:16px;
-    }
   article {
     width:100%;
     min-width:100%;
@@ -26,11 +22,3 @@
     height:150%;
     }
   }
-
-@media (min-width:1280px) {
-  body {
-    font-size:18px;
-    line-height:24px;
-    }
-  }
-  
