@@ -92,23 +92,16 @@ ol, ul {
 
 /* Hamburger button */
 .navbar-default .navbar-toggle {
-  border-color: $accent-dark-color;
+  border-color: $just-off-white-type-color;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: $accent-dark-color;
-}
-
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-color: $just-off-white-type-color;
 }
 
-/*.navbar-default .navbar-nav>li:hover {
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-color: $accent-dark-color;
-  webkit-transition: background-color 0.2s linear;
-  -moz-transition: background-color 0.2s linear;
-  transition: background-color 0.2s linear;
-}*/
+}
 
 .navbar-default .navbar-nav>li>a:hover, .navbar-brand>a:hover {
   color: $accent-dark-color;
@@ -119,7 +112,6 @@ ol, ul {
 
 .jumbotron {
   background-color: $just-off-white-type-color;
-  /*  color: $navbar-type-color;*/
 }
 
 .jumbotron > div > div > h1 {
@@ -245,6 +237,7 @@ header span {
 }
 
 .location {
+  font-size: 120%;
   background-color: white;
   padding: 20px;
 }
@@ -257,6 +250,10 @@ header span {
 #locations {
   background-color: white;
   margin-top: 20px;
+}
+
+#locations > div > div > header {
+  font-size: 120%;
 }
 
 #pane {
@@ -301,28 +298,47 @@ address {
   color: $main-type-color;
 }
 
+/* Registry ==================== */
+
+.section-registry > div > a > img {
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
 
 /* Responsive ==================== */
+
 
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
   .jumbotron {
     padding: 0px;
-    font-size: 97%;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
     margin-bottom: 0px;
-    border-bottom: solid 1px $accent-dark-color;
+    border-bottom: solid 2px $accent-dark-color;
   }
 
+  #savetitle {
+    font-size: 200%;
+  }
+
+  #savedate {
+    font-size: 115%;
+  }
+  
   .section-event:nth-of-type(1) {
     margin-top: 0px;
   }
+
   .section-travel:nth-of-type(1) {
     margin-top: 0px;
   }
+
   .section:first-of-type > div > header {
     border-top: 0px;
   }
+
   #locations > .row:nth-of-type(2) > .col-md-12 > header {
     border-top: 0px;
   }
@@ -335,13 +351,28 @@ address {
     background-color: $white-color;
     color: $main-type-color;
   }
+  
+  .section-registry > div {
+    margin-bottom: 10%;
+  }
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 991px) and (min-width: 768px) {
+  .jumbotron p {
+    width: 90%;
+  }
+
+  .location p {
+    width: 70%;
+  }
   .location.active {
     background-color: $white-color;
     color: $main-type-color;
+  }
+  
+  .section-registry {
+    margin-left: 2em;
   }
 }
 
