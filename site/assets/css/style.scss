@@ -359,9 +359,20 @@ address {
 
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 991px) and (min-width: 768px) {
+  .jumbotron p {
+    width: 90%;
+  }
+
+  .location p {
+    width: 70%;
+  }
   .location.active {
     background-color: $white-color;
     color: $main-type-color;
+  }
+  
+  .section-registry {
+    margin-left: 2em;
   }
 }
 
