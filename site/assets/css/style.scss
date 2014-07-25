@@ -228,6 +228,21 @@ header span {
   margin-top: 4em;
 }
 
+/* Ceremony ==================== */
+
+.section-ceremony:nth-of-type(1) {
+  margin-top: 4em;
+}
+
+.section-ceremony div header {
+  border-top: none;
+  padding-top: 24px;
+}
+
+.section-ceremony div h2 {
+  border-top: none;
+}
+
 /* Guide ==================== */
 
 .section-location {
