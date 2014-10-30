@@ -62,6 +62,10 @@ ol, ul {
   margin-bottom: 3em;
 }
 
+code {
+  color: $pop-color;
+}
+
 /* Navigation ==================== */
 
 .navbar-default .navbar-brand, .navbar-brand>a, .navbar-default .navbar-nav>li>a, .page-header {
